@@ -1185,6 +1185,13 @@ section,
     text-align: center; /* Centraliza o texto em telas pequenas */
   }
 }
+
+#moedas {
+  object-fit: cover;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -1588,7 +1595,7 @@ section,
 
 .team .team-member .member-img img {
   width: 100%;
-  height: auto; /* Ajusta a altura automaticamente */
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1628,45 +1635,14 @@ section,
   color: var(--default-color);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   .team .team-member {
-    display: flex;
-    justify-content: center;
-  }
-
-  .team .team-member .member-img {
-    width: 180px; /* Ajusta a largura da imagem */
-    height: 180px;
+    width: 120px;
+    height: 120px;
   }
 
   .founder-description {
-    padding-left: 10px;
-    text-align: center;
-  }
-
-  .founder-description h3 {
-    font-size: 22px;
-  }
-
-  .founder-description p {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .team .team-member {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .team .team-member .member-img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .founder-description {
-    padding: 10px;
+    padding-left: 0;
     text-align: center;
   }
 
@@ -1678,12 +1654,6 @@ section,
     font-size: 14px;
   }
 }
-
-@media (max-width: 576px) {
-  .team .team-member {
-    display: flex;
-    flex-direction: co
-
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
