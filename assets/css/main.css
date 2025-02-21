@@ -1135,54 +1135,56 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .about-content h3 {
+/* Estilos para o contêiner do texto */
+.about-content {
+  padding: 0 20px; /* Adiciona padding para evitar que o texto encoste nas bordas */
+  max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura do contêiner */
+  word-wrap: break-word; /* Quebra palavras longas */
+  overflow-wrap: break-word; /* Garante que o texto quebre corretamente */
+  word-break: break-word; /* Quebra palavras longas para evitar overflow */
+  white-space: normal; /* Garante que o texto quebre corretamente */
+  overflow: visible; /* Garante que o texto não seja cortado */
+}
+
+/* Estilos para o título */
+.about-content h3 {
   font-weight: 700;
   font-size: 26px;
+  text-align: center;
+  margin-bottom: 15px; /* Adiciona espaço abaixo do título */
 }
 
-.about .about-content ul {
-  list-style: none;
-  padding: 0;
+/* Estilos para o parágrafo */
+.about-content p {
+  font-size: 16px; /* Tamanho base da fonte */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  text-align: justify; /* Texto justificado */
+  margin: 0; /* Remove margens padrão */
+  max-width: 100%; /* Garante que o texto não ultrapasse a largura do contêiner */
 }
 
-.about .about-content ul li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 35px;
+/* Ajustes para telas médias */
+@media (max-width: 992px) {
+  .about-content h3 {
+    font-size: 22px; /* Reduz o tamanho da fonte do título */
+  }
+
+  .about-content p {
+    font-size: 14px; /* Reduz o tamanho da fonte do texto */
+  }
 }
 
-.about .about-content ul li:first-child {
-  margin-top: 35px;
-}
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+  .about-content h3 {
+    font-size: 20px; /* Título menor para telas pequenas */
+  }
 
-.about .about-content ul i {
-  background: var(--surface-color);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 64px;
-  height: 64px;
-  font-size: 24px;
-  margin-right: 15px;
-  color: var(--accent-color);
-  border-radius: 50px;
+  .about-content p {
+    font-size: 13px; /* Fonte menor para telas pequenas */
+    text-align: center; /* Centraliza o texto em telas pequenas */
+  }
 }
-
-.about .about-content ul h4 {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.about .about-content ul p {
-  font-size: 15px;
-}
-
-.about .about-content p:last-child {
-  margin-bottom: 0;
-}
-
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -1578,16 +1580,6 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
-/* .team .team-member {
-  background-color: transparent;
-  box-shadow: none;
-  overflow: hidden;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
-} */
-
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
@@ -1596,7 +1588,7 @@ section,
 
 .team .team-member .member-img img {
   width: 100%;
-  height: 100%;
+  height: auto; /* Ajusta a altura automaticamente */
   object-fit: cover;
 }
 
@@ -1636,14 +1628,45 @@ section,
   color: var(--default-color);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .team .team-member {
-    width: 120px;
-    height: 120px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .team .team-member .member-img {
+    width: 180px; /* Ajusta a largura da imagem */
+    height: 180px;
   }
 
   .founder-description {
-    padding-left: 0;
+    padding-left: 10px;
+    text-align: center;
+  }
+
+  .founder-description h3 {
+    font-size: 22px;
+  }
+
+  .founder-description p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team .team-member {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .team .team-member .member-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .founder-description {
+    padding: 10px;
     text-align: center;
   }
 
@@ -1655,6 +1678,12 @@ section,
     font-size: 14px;
   }
 }
+
+@media (max-width: 576px) {
+  .team .team-member {
+    display: flex;
+    flex-direction: co
+
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
