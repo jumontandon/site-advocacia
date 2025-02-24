@@ -1192,6 +1192,19 @@ section,
   height: 350px;
   border-radius: 50%;
 }
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+  #moedas {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: 200px; /* Ajuste o tamanho conforme necessário */
+  }
+
+  .about-content p {
+    font-size: 13px;
+    text-align: center; /* Centraliza o texto em telas pequenas */
+  }
+}
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
