@@ -1135,6 +1135,145 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
+/* Estilo para os blocos de conteúdo */
+.content-block {
+  margin-bottom: 30px;
+}
+
+.image-wrapper, .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image-wrapper {
+  align-items: center;
+}
+
+/* Estilos para a descrição da fundadora */
+.founder-description {
+  padding: 0 20px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  overflow: visible;
+}
+
+.founder-description h3 {
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.founder-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Media queries para mobile */
+@media (max-width: 768px) {
+  .content-block .row {
+    flex-direction: column;
+  }
+  
+  .image-wrapper, .text-wrapper {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  
+  .image-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .founder-description h3,
+  .about-content h3 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  
+  .founder-description p,
+  .about-content p {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+/* Estilos para colunas */
+.images-column, .text-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.images-column {
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.founder-description {
+  padding: 0 20px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  overflow: visible;
+}
+
+.founder-description h3 {
+  font-weight: 700;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.founder-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Ajustes para telas médias e pequenas */
+@media (max-width: 992px) {
+  .founder-description h3 {
+    font-size: 22px;
+  }
+
+  .founder-description p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-description h3 {
+    font-size: 20px;
+  }
+
+  .founder-description p {
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  /* Em telas pequenas, as colunas podem empilhar */
+  .images-column, .text-column {
+    width: 100%;
+  }
+}
+
 /* Estilos para o contêiner do texto */
 .about-content {
   padding: 0 20px; /* Adiciona padding para evitar que o texto encoste nas bordas */
@@ -1151,60 +1290,78 @@ section,
   font-weight: 700;
   font-size: 26px;
   text-align: center;
-  margin-bottom: 15px; /* Adiciona espaço abaixo do título */
+  margin-bottom: 15px;
 }
 
 /* Estilos para o parágrafo */
 .about-content p {
-  font-size: 16px; /* Tamanho base da fonte */
-  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
-  text-align: justify; /* Texto justificado */
-  margin: 0; /* Remove margens padrão */
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
   max-width: 100%; /* Garante que o texto não ultrapasse a largura do contêiner */
+}
+
+/* Novo código para imagem de Julia Botelho */
+#team .team-member .member-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px; /* Definindo a largura do contêiner da imagem */
+  height: 150px; /* Definindo a altura do contêiner da imagem */
+}
+
+#team .team-member .member-img img {
+  object-fit: cover;
+  width: 100%; /* A imagem vai ocupar 100% do contêiner */
+  height: 100%; /* A altura da imagem será 100% do contêiner */
+  border-radius: 50%; /* Faz a imagem ficar redonda */
+  margin-bottom: 20px;
 }
 
 /* Ajustes para telas médias */
 @media (max-width: 992px) {
   .about-content h3 {
-    font-size: 22px; /* Reduz o tamanho da fonte do título */
+    font-size: 22px;
   }
 
   .about-content p {
-    font-size: 14px; /* Reduz o tamanho da fonte do texto */
+    font-size: 14px;
+  }
+
+  #team .team-member .member-img img {
+    width: 120px;
+    height: 120px;
   }
 }
 
 /* Ajustes para telas pequenas */
 @media (max-width: 768px) {
   .about-content h3 {
-    font-size: 20px; /* Título menor para telas pequenas */
-  }
-
-  .about-content p {
-    font-size: 13px; /* Fonte menor para telas pequenas */
-    text-align: center; /* Centraliza o texto em telas pequenas */
-  }
-}
-
-#moedas {
-  object-fit: cover;
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-}
-
-/* Ajustes para telas pequenas */
-@media (max-width: 768px) {
-  #moedas {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: 200px; /* Ajuste o tamanho conforme necessário */
+    font-size: 20px;
   }
 
   .about-content p {
     font-size: 13px;
-    text-align: center; /* Centraliza o texto em telas pequenas */
+    text-align: center;
+  }
+
+  #team .team-member .member-img img {
+    width: 120px;
+    height: 120px;
   }
 }
+.img-fluid {
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+}
+
+.img-fluid-coins{
+  border-radius: 75%;
+}
+
+
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
@@ -1599,7 +1756,7 @@ section,
 
 /*--------------------------------------------------------------
 # Team Section
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .team .team-member .member-img {
   position: relative;
   overflow: hidden;
