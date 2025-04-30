@@ -1073,65 +1073,80 @@ section,
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
-.featured-services .service-item {
-  background-color: var(--surface-color);
+/* Configuração da seção de serviços */
+.services {
+  background-color: #4a0606;
+  padding: 60px 0;
+}
+
+/* Título da seção */
+.services .section-title h2 {
+  color: #ece4d7;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* "Conheça nossos serviços" em #ece4d7 */
+.services .section-title p span {
+  color: #ece4d7;
+  font-size: 18px;
+}
+
+/* Quadros de serviços em #ece4d7 com texto #4a0606 */
+.services .service-item {
+  background-color: #ece4d7;
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-  padding: 50px 30px;
+  padding: 30px;
   transition: all 0.3s ease-in-out;
   height: 100%;
   position: relative;
   z-index: 1;
+  border-radius: 8px;
 }
 
-.featured-services .service-item:before {
-  content: "";
-  position: absolute;
-  background: var(--accent-color);
-  inset: 100% 0 0 0;
-  transition: all 0.3s;
-  z-index: -1;
+/* Ícones nos quadros de serviços */
+.services .service-item .icon {
+  margin-bottom: 15px;
 }
 
-.featured-services .service-item .icon {
-  margin-bottom: 10px;
-}
-
-.featured-services .service-item .icon i {
-  color: var(--accent-color);
+.services .service-item .icon i {
+  color: #4a0606;
   font-size: 36px;
   transition: ease-in-out 0.3s;
 }
 
-.featured-services .service-item h4 {
+/* Títulos dos serviços */
+.services .service-item h3 {
+  color: #4a0606;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 20px;
 }
 
-.featured-services .service-item h4 a {
-  color: var(--heading-color);
-  transition: ease-in-out 0.3s;
+/* Links nos títulos dos serviços */
+.services .service-item a {
+  text-decoration: none;
 }
 
-.featured-services .service-item p {
+/* Texto descritivo dos serviços */
+.services .service-item p {
+  color: #4a0606;
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
-  transition: ease-in-out 0.3s;
 }
 
-.featured-services .service-item:hover h4 a,
-.featured-services .service-item:hover .icon i,
-.featured-services .service-item:hover p {
-  color: var(--contrast-color);
+/* Efeito hover nos quadros de serviços */
+.services .service-item:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
 }
 
-.featured-services .service-item:hover:before {
-  background: var(--accent-color);
-  inset: 0;
-  border-radius: 0px;
+/* Espaçamento entre os itens na grade */
+.services .row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
 }
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1359,6 +1374,34 @@ section,
 
 .img-fluid-coins{
   border-radius: 75%;
+}
+
+/* Cor de fundo do bloco "About" */
+.about.section.light-background {
+  background-color: #4a0606;
+  color: #ece4d7;
+}
+
+/* Garante que todos os textos dentro da seção também usem a cor clara */
+.about.section.light-background h2,
+.about.section.light-background h3,
+.about.section.light-background p,
+.about.section.light-background span,
+.about.section.light-background .section-title,
+.about.section.light-background .founder-description,
+.about.section.light-background .about-content {
+  color: #ece4d7;
+}
+
+/* Corrige também a cor dos títulos específicos, se forem sobrescritos */
+.section-title h2,
+.about-content h3,
+.founder-description h3 {
+  color: #ece4d7;
+}
+.about.section.light-background .team-member h4,
+.about.section.light-background .team-member span {
+  color: #ece4d7;
 }
 
 
@@ -2121,6 +2164,21 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
+
+.contact .info div {
+  margin-bottom: 10px; /* pequeno espaçamento entre os contatos */
+}
+
+.contact .social-links p {
+  margin-bottom: 5px;
+}
+
+.contact .credentials {
+  margin-top: 20px;
+  font-weight: bold;
+  color: var(--default-color); /* ou #ece4d7 se quiser bege */
+}
+
 
 /*--------------------------------------------------------------
 # Service Details Section
