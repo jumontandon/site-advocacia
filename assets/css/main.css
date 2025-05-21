@@ -20,10 +20,10 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ece4d7; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #ece4d7; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #4a0606; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color: #ece4d7; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ece4d7; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -1404,6 +1404,17 @@ section,
   color: #ece4d7;
 }
 
+.image-wrapper, .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */ /* Remover esta linha */
+}
+
+.text-wrapper {
+  align-items: flex-start; /* Alinha o conteúdo ao topo da coluna */
+}
+
+
 
 /*--------------------------------------------------------------
 # Skills Section
@@ -2176,9 +2187,20 @@ section,
 .contact .credentials {
   margin-top: 20px;
   font-weight: bold;
-  color: var(--default-color); /* ou #ece4d7 se quiser bege */
+  color: var(--default-color); 
 }
 
+
+
+.contact .php-email-form input[type=text],
+.contact .php-email-form input[type=email],
+.contact .php-email-form textarea {
+  background-color: #ffffff !important;
+}
+
+.contact .php-email-form {
+  background-color: #ffffff !important;
+}
 
 /*--------------------------------------------------------------
 # Service Details Section
@@ -2306,6 +2328,30 @@ section,
 .portfolio-details .portfolio-description p {
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Cor do WhatsApp */
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.whatsapp-float img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
 }
 
 
